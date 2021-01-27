@@ -1,3 +1,47 @@
+# Solución al Backend Coding Challenge
+
+Solución desarrollada por Jorge Stiven Montenegro Pulido
+
+- Se eligió el desarrollo de la aplicación en nodejs con ayuda del framework de Nestjs.
+- Se eligió la base de datros de mongoDB, la elegí ya que con ella tengo mayor conocimiento a la hora de desarrollar apis, aunque eso no me límita a solo esa base de datos, el alojamiento de la base de datos se hizo en Mongo Atlas con una cuenta gratuita. 
+**Link de conexión: mongodb+srv://assigments:poygOVGfaNJXXjem@cluster0.kvtam.mongodb.net/backAssigments?retryWrites=true&w=majority**
+- Se realizó una nueva coleción en Postman para el testeo de la api, no se manejaron variables de entorno dentro de postman para hacer las pruebas para su facil inteerpretación.
+
+# Puesta en marcha de la solución
+
+- Para poner a correr el programa de debe de descargar el repositorio con la solución bridada
+- seguido se dirije uno a la raiz del proyecto mediante consola
+- digite el comando de "npm i" para instalar los paquetes necesarios para el correcto fucnionamiento del proyecto
+- al finalizar cree un nuevo archivo en la raíz del proyecto llamado ".env" en él debe de ingresar la cadena de conexión de la siguiente manera: *MONGOBD=mongodb+srv://assigments:poygOVGfaNJXXjem@cluster0.kvtam.mongodb.net/backAssigments?retryWrites=true&w=majority*
+- ya creado el enviroment con la cadena de conexión en la raíz del proyecto y en la consola ingrese el comando de "npm run start", esto le permitira correr el proyecto de manera local, cuando finalicé de correr en la consola le mostrará un mensaje de "Server is Running".
+
+# Solución al problema plantado originalmente
+
+El programa automatiza el servicio de asignación de problemas a agentes, primero permite la creación, modificación, aliminación y la consulta de agentes, siendo solo requerido el campo de "name" representando el nombre del agente.
+Para los problemas se le permite la creación de nuevos problemas, en la cual valida si hay agentes disponibles y le asigna uno, del caso contrario se queda esperando que uno se encuentre libre para asignarle el problema.
+en el caso de que el problema sea resuelto, se podrá dar solución mediante la ruta indicada lo cual cerrará el problema y dejará libre al agente, en caso de que haya un problema aún sin asignar, este lo asignara de inmediato al agente que quedó libre.
+
+
+# Capacidades de la solución
+
+La solución cuneta con diferentes distintivos, entre ellas está la validación de campos mediente el uso de "class validation" que me permite validar si un campo es requerido o con el formato correcto mientras devuelve un error descriptivo del mismo. También con validaciones logicos que permiten el correcto flujo de la app, validando posibles errores que pueda presentar a la hora de hacer las peticiones.
+
+También la solución cuenta con integraciones join para los dos tipos de colecciones "agent" y "problems" para que en las consultas nos permita saber si un agente ya tiene problemas y saber cuáles son, igual pasa con un problema, nos permite saber si un problema ya tiene un agente asignado.
+
+# Estructura de base de datos
+## Agente
+name -- requerido de tipo String (nombre del agente)
+position -- no requerido de tipo string (cargo al que pertenece el agente)
+isFree -- campo automatico de tipo booleano (si se encuentra disponible)
+problem -- campo automatico de tipo mongoId (porblema que tiene actualmente relacionado)
+
+## Problema
+description -- requerido de tipo String (descripción del problema)
+agent -- campo automatico de tipo string (agente que está asignado a ese problema, se conserva para tener un historial de quien lo solucionó)
+solution -- no requerido de tipo string (solución del problema para dejar historial)
+isClosed
+--------------------------------------------------------------------------------------------------------------------------
+
 # Backend Coding Challenge
 Code Challenge para candidatos Backend para DocRed.
 
