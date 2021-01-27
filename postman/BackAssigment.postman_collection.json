@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "38456c88-fcbc-4384-9aab-9cd766d4b422",
+		"name": "BackAssigment",
+		"description": "Desarrollo de prueba de back de asigancación de problemas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Agents",
+			"item": [
+				{
+					"name": "Get Agents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/agents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"agents"
+							]
+						},
+						"description": "Trae l información de todos los agentes"
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Agent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/agents/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"agents",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6010c2415a192c5028aed037"
+								}
+							]
+						},
+						"description": "Trae un agente existente mediante el id"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Agents",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Jorge Stiven Montenegro\",\r\n    \"position\":\"Dessarrollador\",\r\n    \"isFree\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/agents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"agents"
+							]
+						},
+						"description": "Crea un nuevo agente desde cero"
+					},
+					"response": []
+				},
+				{
+					"name": "Modify Agents",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isFree\": true,\r\n    \"_id\": \"6010c2415a192c5028aed037\",\r\n    \"name\": \"Jorge Stiven Montenegro Pulido\",\r\n    \"position\": \"Dessarrollador\",\r\n    \"createdAt\": \"2021-01-27T01:30:41.903Z\",\r\n    \"updatedAt\": \"2021-01-27T01:30:41.903Z\",\r\n    \"__v\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/agents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"agents"
+							]
+						},
+						"description": "Modifica la información de un agente existente"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Agents",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/agents/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"agents",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Elimina a un agente existente"
+					},
+					"response": []
+				}
+			],
+			"description": "Crud de agentes"
+		},
+		{
+			"name": "Problems",
+			"item": [
+				{
+					"name": "Get Problems",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/problems",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"problems"
+							]
+						},
+						"description": "Trae a todos los problemas con su información"
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Problem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/problems/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"problems",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "Trae a un problema existente mediante el id\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Problem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\":\"Nuevo problema existencial\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/problems",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"problems"
+							]
+						},
+						"description": "Crea un problema desde cero, si hay un agente libre, lo asigna a él de una vez"
+					},
+					"response": []
+				},
+				{
+					"name": "Modify Problem",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/problems",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"problems"
+							]
+						},
+						"description": "Modifica unproblema existente"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Problem",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/problems/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"problems",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6010c35782e20c009407068a"
+								}
+							]
+						},
+						"description": "Eliminar un problema existente mediante el id"
+					},
+					"response": []
+				},
+				{
+					"name": "Solve Problem",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"problemId\": \"6010c35782e20c009407068a\",\r\n    \"solution\": \"Se encontró el problema\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/problems/solve",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"problems",
+								"solve"
+							]
+						},
+						"description": "Resuelve un problema dando una solución y liberando al agente, si hay problemas aún disponibles se le asigna uno nuevo"
+					},
+					"response": []
+				}
+			],
+			"description": "CRUD de problemas"
+		},
+		{
+			"name": "server is running",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				},
+				"description": "Verifica si el back se encuentra funcionando"
+			},
+			"response": []
+		}
+	]
+}
