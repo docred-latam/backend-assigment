@@ -3,7 +3,7 @@
 Solución desarrollada por Jorge Stiven Montenegro Pulido
 
 - Se eligió el desarrollo de la aplicación en nodejs con ayuda del framework de Nestjs.
-- Se eligió la base de datros de mongoDB, la elegí ya que con ella tengo mayor conocimiento a la hora de desarrollar apis, aunque eso no me límita a solo esa base de datos, el alojamiento de la base de datos se hizo en Mongo Atlas con una cuenta gratuita. 
+- Se eligió la base de datros de mongoDB, la elegí ya que con ella tengo mayor conocimiento a la hora de desarrollar apis, aunque eso no me límita a solo esa base de datos, el alojamiento de la base de datos se hizo en Mongo Atlas con una cuenta gratuita.
 **Link de conexión: mongodb+srv://assigments:poygOVGfaNJXXjem@cluster0.kvtam.mongodb.net/backAssigments?retryWrites=true&w=majority**
 - Se realizó una nueva coleción en Postman para el testeo de la api, no se manejaron variables de entorno dentro de postman para hacer las pruebas para su facil inteerpretación.
 
@@ -32,16 +32,30 @@ También la solución cuenta con integraciones join para los dos tipos de colecc
 ## Agente
 
 name -- requerido de tipo String (nombre del agente)
+
+
 position -- no requerido de tipo string (cargo al que pertenece el agente)
+
+
 isFree -- campo automatico de tipo booleano (si se encuentra disponible)
+
+
 problem -- campo automatico de tipo mongoId (porblema que tiene actualmente relacionado)
+
+
 
 ## Problema
 
 description -- requerido de tipo String (descripción del problema)
+
+
 agent -- campo automatico de tipo string (agente que está asignado a ese problema, se conserva para tener un historial de quien lo solucionó)
+
+
 solution -- no requerido de tipo string (solución del problema para dejar historial)
-isClosed
+
+
+isClosed -- automatico de tipo booleano (permite saber si se cerró el problema)
 
 --------------------------------------------------------------------------------------------------------------------------
 
