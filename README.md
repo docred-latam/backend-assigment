@@ -30,16 +30,19 @@ También la solución cuenta con integraciones join para los dos tipos de colecc
 
 # Estructura de base de datos
 ## Agente
+
 name -- requerido de tipo String (nombre del agente)
 position -- no requerido de tipo string (cargo al que pertenece el agente)
 isFree -- campo automatico de tipo booleano (si se encuentra disponible)
 problem -- campo automatico de tipo mongoId (porblema que tiene actualmente relacionado)
 
 ## Problema
+
 description -- requerido de tipo String (descripción del problema)
 agent -- campo automatico de tipo string (agente que está asignado a ese problema, se conserva para tener un historial de quien lo solucionó)
 solution -- no requerido de tipo string (solución del problema para dejar historial)
 isClosed
+
 --------------------------------------------------------------------------------------------------------------------------
 
 # Backend Coding Challenge
