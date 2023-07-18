@@ -21,11 +21,8 @@ No debes implementar autorización o autenticación, ya que no es importante en 
 ## Requerimientos técnicos
 - Node.js
 - Tests (calidad y cobertura).
-- Eres libre de elegir cualquier framework, pero te recomendamos que uses uno con el que más te sientas cómodo.
-- Eres libre de usar la base de datos que prefieras, sin embargo, debes justificar tu elección.
-- Typescript es un plus.
-- NestJS es un plus.
-- **Puntos extra**: Provee una collección en Postman para testear tu solución.
+- La prueba se debe desarrollar con el framework NestJs.
+- La prueba se debe implementar con graphql.
 
 ## Instrucciones
 - The challenge is on!
@@ -35,4 +32,3 @@ No debes implementar autorización o autenticación, ya que no es importante en 
 - Provee un README explicando como correr tu solucion *paso a paso*.
 - Envianos un email con el link a tu repositorio cuando termines el challenge.
 - El projecto debe ser "auto-suficiente". Es decir, Si usa una base de datos, la solución debe proveer una.
-- Por favor, no te tomes mas de 1 dia.
